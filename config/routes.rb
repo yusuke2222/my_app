@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'posts' => 'posts#index'
-  get 'posts' => 'posts#new'
-  get 'posts' => 'posts#show'
+  get 'posts/index' => 'posts#index'
+  get 'posts/new' => 'posts#new'
+  get 'posts/:id' => 'posts#show'
+  post 'posts/create' => 'posts#create'
 
   get '/' => 'home#top'
   get 'about' => 'home#about'
